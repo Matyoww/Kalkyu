@@ -4,15 +4,52 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#B7CB9C"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <ImageView
+        android:id="@+id/kalkyu_logo"
+        android:layout_width="346dp"
+        android:layout_height="393dp"
+        android:layout_marginTop="4dp"
+        android:contentDescription="@string/kalkyu_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/kalkyu___removebg_preview_1" />
+
+    <Button
+        android:id="@+id/conversion_btn"
+        android:layout_width="397dp"
+        android:layout_height="63dp"
+        android:backgroundTint="#648F40"
+        android:elevation="6dp"
+        android:text="@string/conversion"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:cornerRadius="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scientific_btn"
+        app:layout_constraintVertical_bias="0.23" />
+
+    <Button
+        android:id="@+id/scientific_btn"
+        android:layout_width="397dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#648F40"
+        android:elevation="6dp"
+        android:text="@string/scientific"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:cornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kalkyu_logo"
+        app:layout_constraintVertical_bias="0.019" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
