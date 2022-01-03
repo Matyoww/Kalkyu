@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">Kalkyu</string>
-    <string name="conversion">CONVERSION</string>
-    <string name="scientific">SCIENTIFIC</string>
+    <string name="length">LENGTH</string>
+    <string name="weight">WEIGHT</string>
+    <string name="volume">VOLUME</string>
+    <string name="temperature">TEMPERATURE</string>
+    <string name="calculator">CALCULATOR</string>
+    <string name="time">TIME</string>
     <string name="kalkyu_logo">kalkyu_logo</string>
 </resources>

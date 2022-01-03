@@ -9,9 +9,8 @@
 
     <ImageView
         android:id="@+id/kalkyu_logo"
-        android:layout_width="346dp"
-        android:layout_height="393dp"
-        android:layout_marginTop="4dp"
+        android:layout_width="293dp"
+        android:layout_height="320dp"
         android:contentDescription="@string/kalkyu_logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
@@ -19,37 +18,93 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/kalkyu___removebg_preview_1" />
 
-    <Button
-        android:id="@+id/conversion_btn"
-        android:layout_width="397dp"
-        android:layout_height="63dp"
-        android:backgroundTint="#648F40"
-        android:elevation="6dp"
-        android:text="@string/conversion"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        app:cornerRadius="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ScrollView
+        android:layout_width="415dp"
+        android:layout_height="274dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scientific_btn"
-        app:layout_constraintVertical_bias="0.23" />
+        app:layout_constraintTop_toBottomOf="@+id/kalkyu_logo">
 
-    <Button
-        android:id="@+id/scientific_btn"
-        android:layout_width="397dp"
-        android:layout_height="63dp"
-        android:layout_marginTop="12dp"
-        android:backgroundTint="#648F40"
-        android:elevation="6dp"
-        android:text="@string/scientific"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        app:cornerRadius="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/kalkyu_logo"
-        app:layout_constraintVertical_bias="0.019" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/calculator_btn"
+                android:layout_width="325dp"
+                android:layout_height="63dp"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#648F40"
+                android:elevation="6dp"
+                android:text="@string/calculator"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                app:cornerRadius="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/weight_btn"
+                android:layout_width="325dp"
+                android:layout_height="63dp"
+                android:backgroundTint="#648F40"
+                android:elevation="6dp"
+                android:text="@string/weight"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                app:cornerRadius="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/length_btn" />
+
+            <Button
+                android:id="@+id/volume_btn"
+                android:layout_width="325dp"
+                android:layout_height="63dp"
+                android:backgroundTint="#648F40"
+                android:elevation="6dp"
+                android:text="@string/volume"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                app:cornerRadius="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/weight_btn" />
+
+            <Button
+                android:id="@+id/length_btn"
+                android:layout_width="324dp"
+                android:layout_height="65dp"
+                android:backgroundTint="#648F40"
+                android:elevation="6dp"
+                android:text="@string/length"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                app:cornerRadius="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.494"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/calculator_btn" />
+
+            <Button
+                android:id="@+id/time_btn"
+                android:layout_width="324dp"
+                android:layout_height="65dp"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="#648F40"
+                android:elevation="6dp"
+                android:text="@string/time"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                app:cornerRadius="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/volume_btn" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
