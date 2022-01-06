@@ -19,8 +19,8 @@
         app:srcCompat="@drawable/kalkyu___removebg_preview_1" />
 
     <ScrollView
-        android:layout_width="415dp"
-        android:layout_height="274dp"
+        android:layout_width="446dp"
+        android:layout_height="272dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/kalkyu_logo">
