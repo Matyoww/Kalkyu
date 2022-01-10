@@ -14,6 +14,10 @@
             android:exported="false"
             android:parentActivityName="com.example.kalkyu.MainActivity" />
         <activity
+            android:name=".SpeedCnvt"
+            android:exported="false"
+            android:parentActivityName="com.example.kalkyu.MainActivity" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

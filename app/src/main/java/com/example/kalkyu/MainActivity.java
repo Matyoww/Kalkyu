@@ -10,6 +10,7 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
 
     private Button calculator_btn;
+    private Button speed_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,10 +24,23 @@ public class MainActivity extends AppCompatActivity {
                 openCalc();
             }
         });
+
+        speed_btn = (Button) findViewById(R.id.speed_btn);
+        speed_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openSpeedCnvt();
+            }
+        });
     }
 
     public void openCalc(){
         Intent changeView = new Intent(this, BasicCalc.class);
         startActivity(changeView);
     }
+    public void openSpeedCnvt(){
+        Intent changeView = new Intent(this, SpeedCnvt.class);
+        startActivity(changeView);
+    }
+
 }
