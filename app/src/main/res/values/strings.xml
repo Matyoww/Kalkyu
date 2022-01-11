@@ -9,9 +9,9 @@
     <string name="kalkyu_logo">kalkyu_logo</string>
     <string-array name="Speed_Unit">
         <item>Miles per hour</item>
-        <item>Foot per second</item>
-        <item>Meter per second</item>
-        <item>Kilometer per hour</item>
+        <item>Feet per second</item>
+        <item>Meters per second</item>
+        <item>Kilometers per hour</item>
         <item>Knot</item>
     </string-array>
 </resources>
