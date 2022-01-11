@@ -33,6 +33,6 @@ public class SpeedCnvt extends AppCompatActivity {
         adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner2.setAdapter(adapter);
 
-
     }
 }
+

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:background="#FFFFFF">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/my_toolbar"
@@ -28,10 +28,38 @@ android:background="#FFFFFF">
         android:layout_marginStart="58dp"
         android:layout_marginTop="78dp"
         android:layout_marginEnd="59dp"
-        android:textSize="20sp"
-        />
+        android:textSize="20sp" />
 
-    <TextView
+    <Spinner
+        android:id="@+id/spinner_speed2"
+        android:layout_width="294dp"
+        android:layout_height="53dp"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="-4dp"
+        android:layout_marginEnd="59dp"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btn_speedConvert"
+        android:layout_width="wrap_content"
+        android:layout_height="63dp"
+        android:layout_below="@+id/txtViewUnit"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="125dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="125dp"
+        android:backgroundTint="#648F40"
+        android:elevation="6dp"
+        android:text="CONVERT"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:cornerRadius="25dp" />
+
+    <EditText
         android:id="@+id/txt_SpeedUnit1"
         android:layout_width="325dp"
         android:layout_height="60dp"
@@ -39,50 +67,54 @@ android:background="#FFFFFF">
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="58dp"
-        android:layout_marginTop="0dp"
+        android:layout_marginTop="-7dp"
         android:layout_marginEnd="59dp"
-        android:background="@drawable/bg_textview2" />
+        android:background="@drawable/bg_textview2"
+        android:ems="10"
+        android:gravity="right"
+        android:inputType="numberDecimal"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:textSize="25sp" />
 
-    <Spinner
-        android:id="@+id/spinner_speed2"
-        android:layout_width="294dp"
-        android:layout_height="53dp"
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="277dp"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/txt_SpeedUnit1"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="58dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="59dp"
-        android:textSize="20sp"/>
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="76dp"
+        android:fontFamily="sans-serif-black"
+        android:text="CONVERT TO:"
+        android:textSize="18sp" />
 
     <TextView
-        android:id="@+id/txt_SpeedUnit2"
-        android:layout_width="325dp"
-        android:layout_height="60dp"
+        android:id="@+id/txtViewUnit"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/spinner_speed2"
         android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="58dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginEnd="54dp"
-        android:background="@drawable/bg_textview2" />
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="20dp"
+        android:text="1.695"
+        android:textSize="70sp" />
 
-    <Button
-        android:id="@+id/btn_speedConvert"
-        android:layout_width="wrap_content"
-        android:layout_height="63dp"
-        android:layout_below="@+id/txt_SpeedUnit2"
-        android:layout_alignParentStart="true"
+    <TextView
+        android:id="@+id/txtViewUnit2"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinner_speed2"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="130dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="50dp"
-        android:layout_marginEnd="129dp"
-        android:backgroundTint="#648F40"
-        android:elevation="6dp"
-        android:text="CONVERT"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        app:cornerRadius="25dp" />
+        android:layout_marginEnd="46dp"
+        android:layout_toEndOf="@+id/txtViewUnit"
+        android:text="kph"
+        android:textSize="40sp" />
 
 
 </RelativeLayout>
