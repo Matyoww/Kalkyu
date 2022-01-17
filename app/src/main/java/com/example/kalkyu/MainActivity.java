@@ -11,6 +11,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Button calculator_btn;
     private Button speed_btn;
+    private Button time_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +33,14 @@ public class MainActivity extends AppCompatActivity {
                 openSpeedCnvt();
             }
         });
+
+        time_btn = (Button) findViewById(R.id.time_btn);
+        time_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openTimeConvert();
+            }
+        });
     }
 
     public void openCalc(){
@@ -40,6 +49,10 @@ public class MainActivity extends AppCompatActivity {
     }
     public void openSpeedCnvt(){
         Intent changeView = new Intent(this, SpeedCnvt.class);
+        startActivity(changeView);
+    }
+    public void openTimeConvert(){
+        Intent changeView = new Intent(this, TimeConvert.class);
         startActivity(changeView);
     }
 

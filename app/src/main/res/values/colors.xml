@@ -11,4 +11,6 @@
     <color name="textview_border">#B7CB9C</color>
     <color name="textview_border2">#3C9C7D</color>
     <color name="bg_color">#648F40</color>
+    <color name="bg_time">#ABE092</color>
+    <color name="time_longAnswer">#005F0F</color>
 </resources>

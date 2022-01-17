@@ -10,13 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Kalkyu">
         <activity
+            android:name=".TimeConvert"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"/>
+        <activity
             android:name=".BasicCalc"
             android:exported="false"
-            android:parentActivityName="com.example.kalkyu.MainActivity" />
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".SpeedCnvt"
             android:exported="false"
-            android:parentActivityName="com.example.kalkyu.MainActivity" />
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
