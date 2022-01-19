@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
@@ -31,9 +33,15 @@ public class BasicCalc extends AppCompatActivity {
     private Button divide_btn;
     private Button equal_btn;
     private Button clear_btn;
+    private Button power_btn;
+    private Button leftParen_btn;
+    private Button rightParen_btn;
+    private Button decimal_btn;
     private TextView result;
     private TextView info;
     String equation = "";
+    String formula = "";
+    String tempFormula = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +50,7 @@ public class BasicCalc extends AppCompatActivity {
 
         CalcView();
 
-        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        Toolbar myToolbar = findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
 
         ActionBar ab = getSupportActionBar();
@@ -53,9 +61,10 @@ public class BasicCalc extends AppCompatActivity {
         equal_btn.setOnClickListener(view -> {
             Double ans = null;
             ScriptEngine engine = new ScriptEngineManager().getEngineByName("rhino");
+            checkForPower();
 
             try {
-                ans = (double)engine.eval(equation);
+                ans = (double)engine.eval(formula);
             } catch (ScriptException e) {
                 Toast.makeText(this, "Invalid Input", Toast.LENGTH_SHORT).show();
             }
@@ -126,26 +135,93 @@ public class BasicCalc extends AppCompatActivity {
             equation = equation + "/";
             info.setText(String.format("%s/", info.getText().toString()));
         });
+        power_btn.setOnClickListener(view -> {
+            equation = equation + "^";
+            info.setText(String.format("%s^", info.getText().toString()));
+        });
+        leftParen_btn.setOnClickListener(view -> {
+            equation = equation + "(";
+            info.setText(String.format("%s(", info.getText().toString()));
+        });
+        rightParen_btn.setOnClickListener(view -> {
+            equation = equation + ")";
+            info.setText(String.format("%s)", info.getText().toString()));
+        });
+        decimal_btn.setOnClickListener(view -> {
+            equation = equation + ".";
+            info.setText(String.format("%s.", info.getText().toString()));
+        });
+    }
+    
+    private void checkForPower(){
+        ArrayList<Integer> indexOfPowers = new ArrayList<>();
+        for(int i = 0; i < equation.length(); i++)
+        {
+            if (equation.charAt(i) == '^')
+                indexOfPowers.add(i);
+        }
+
+        formula = equation;
+        tempFormula = equation;
+        for(Integer index: indexOfPowers)
+        {
+            changeFormula(index);
+        }
+        formula = tempFormula;
+    }
+
+    private void changeFormula (Integer index){
+        String numberLeft = "";
+        String numberRight = "";
+
+        for(int i = index + 1; i< equation.length(); i++)
+        {
+            if(isNumeric(equation.charAt(i)))
+                numberRight = numberRight + equation.charAt(i);
+            else
+                break;
+        }
+
+        for(int i = index - 1; i >= 0; i--)
+        {
+            if(isNumeric(equation.charAt(i)))
+                numberLeft = equation.charAt(i) + numberLeft;
+            else
+                break;
+        }
+
+        String original = numberLeft + "^" + numberRight;
+        String changed = "Math.pow("+numberLeft+","+numberRight+")";
+        tempFormula = tempFormula.replace(original,changed);
+    }
+
+    private boolean isNumeric(char c)
+    {
+        return (c <= '9' && c >= '0') || c == '.';
     }
 
     private void CalcView() {
-        one_btn = (Button)findViewById(R.id.btn_1);
-        two_btn = (Button)findViewById(R.id.btn_2);
-        three_btn = (Button)findViewById(R.id.btn_3);
-        four_btn = (Button)findViewById(R.id.btn_4);
-        five_btn = (Button)findViewById(R.id.btn_5);
-        six_btn = (Button)findViewById(R.id.btn_6);
-        seven_btn = (Button)findViewById(R.id.btn_7);
-        eight_btn = (Button)findViewById(R.id.btn_8);
-        nine_btn = (Button)findViewById(R.id.btn_9);
-        zero_btn = (Button)findViewById(R.id.btn_0);
-        plus_btn = (Button)findViewById(R.id.btn_plus);
-        minus_btn = (Button)findViewById(R.id.btn_minus);
-        multiply_btn = (Button)findViewById(R.id.btn_multiply);
-        divide_btn = (Button)findViewById(R.id.btn_divide);
-        equal_btn = (Button)findViewById(R.id.btn_equal);
-        clear_btn = (Button)findViewById(R.id.btn_clear);
-        result = (TextView)findViewById(R.id.result);
-        info = (TextView)findViewById(R.id.info);
+        one_btn = findViewById(R.id.btn_1);
+        two_btn = findViewById(R.id.btn_2);
+        three_btn = findViewById(R.id.btn_3);
+        four_btn = findViewById(R.id.btn_4);
+        five_btn = findViewById(R.id.btn_5);
+        six_btn = findViewById(R.id.btn_6);
+        seven_btn = findViewById(R.id.btn_7);
+        eight_btn = findViewById(R.id.btn_8);
+        nine_btn = findViewById(R.id.btn_9);
+        zero_btn = findViewById(R.id.btn_0);
+        plus_btn = findViewById(R.id.btn_plus);
+        minus_btn = findViewById(R.id.btn_minus);
+        multiply_btn = findViewById(R.id.btn_multiply);
+        divide_btn = findViewById(R.id.btn_divide);
+        equal_btn = findViewById(R.id.btn_equal);
+        clear_btn = findViewById(R.id.btn_clear);
+        power_btn = findViewById(R.id.btn_power);
+        leftParen_btn = findViewById(R.id.btn_leftParen);
+        rightParen_btn = findViewById(R.id.btn_rightParen);
+        decimal_btn = findViewById(R.id.btn_decimal);
+        result = findViewById(R.id.result);
+        info = findViewById(R.id.info);
     }
 }
