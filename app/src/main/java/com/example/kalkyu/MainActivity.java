@@ -11,6 +11,9 @@ public class MainActivity extends AppCompatActivity {
 
     private Button calculator_btn;
     private Button speed_btn;
+    private Button length_btn,
+            weight_btn,
+            volume_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +35,30 @@ public class MainActivity extends AppCompatActivity {
                 openSpeedCnvt();
             }
         });
+
+        length_btn = (Button) findViewById(R.id.length_btn);
+        length_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openLengthCnvt();
+            }
+        });
+
+        weight_btn = (Button) findViewById(R.id.weight_btn);
+        weight_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openWeightCnvt();
+            }
+        });
+
+        volume_btn = (Button) findViewById(R.id.volume_btn);
+        volume_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openVolumeCnvt();
+            }
+        });
     }
 
     public void openCalc(){
@@ -40,6 +67,18 @@ public class MainActivity extends AppCompatActivity {
     }
     public void openSpeedCnvt(){
         Intent changeView = new Intent(this, SpeedCnvt.class);
+        startActivity(changeView);
+    }
+    public void openLengthCnvt(){
+        Intent changeView = new Intent(this, LengthCnvt.class);
+        startActivity(changeView);
+    }
+    public void openWeightCnvt(){
+        Intent changeView = new Intent(this, WeightCnvt.class);
+        startActivity(changeView);
+    }
+    public void openVolumeCnvt(){
+        Intent changeView = new Intent(this, VolumeCnvt.class);
         startActivity(changeView);
     }
 
