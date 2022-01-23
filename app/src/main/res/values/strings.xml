@@ -14,33 +14,4 @@
         <item>Kilometers per hour</item>
         <item>Knot</item>
     </string-array>
-    <string-array name="Length_Unit">
-        <item>Millimeter</item>
-        <item>Centimeter</item>
-        <item>Meter</item>
-        <item>Kilometer</item>
-        <item>Inch</item>
-        <item>Foot</item>
-        <item>Yard</item>
-        <item>Mile</item>
-        <item>Nautical Mile</item>
-    </string-array>
-    <string-array name="Weight_Unit">
-        <item>Milligram</item>
-        <item>Gram</item>
-        <item>Kilogram</item>
-        <item>Metric Ton</item>
-        <item>Ounce</item>
-        <item>Pound</item>
-    </string-array>
-    <string-array name="Volume_Unit">
-        <item>Milliliter</item>
-        <item>Liter</item>
-        <item>Cup</item>
-        <item>Pint</item>
-        <item>Gallon</item>
-        <item>Quart</item>
-        <item>Cubic Meter</item>
-        <item>Cubic Feet</item>
-    </string-array>
 </resources>
