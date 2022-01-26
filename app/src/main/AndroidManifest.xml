@@ -22,6 +22,18 @@
             android:exported="false"
             android:parentActivityName=".MainActivity" />
         <activity
+            android:name=".LengthCnvt"
+            android:exported="false"
+            android:parentActivityName="com.example.kalkyu.MainActivity" />
+        <activity
+            android:name=".WeightCnvt"
+            android:exported="false"
+            android:parentActivityName="com.example.kalkyu.MainActivity" />
+        <activity
+            android:name=".VolumeCnvt"
+            android:exported="false"
+            android:parentActivityName="com.example.kalkyu.MainActivity" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

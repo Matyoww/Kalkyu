@@ -6,9 +6,6 @@
     <string name="temperature">TEMPERATURE</string>
     <string name="calculator">CALCULATOR</string>
     <string name="time">TIME</string>
-    <string name="equal">=</string>
-    <string name="formula">Formula:</string>
-    <string name="convert">CONVERT</string>
     <string name="kalkyu_logo">kalkyu_logo</string>
     <string-array name="Speed_Unit">
         <item>Miles per hour</item>
@@ -16,12 +13,5 @@
         <item>Meters per second</item>
         <item>Kilometers per hour</item>
         <item>Knot</item>
-    </string-array>
-    <string-array name="Time_Unit">
-        <item>Second</item>
-        <item>Minute</item>
-        <item>Hour</item>
-        <item>Day</item>
-        <item>Week</item>
     </string-array>
 </resources>
