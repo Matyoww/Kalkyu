@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="WHAT IS THE "
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="66dp"
+        tools:layout_editor_absoluteY="135dp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="%"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="305dp"
+        tools:layout_editor_absoluteY="130dp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="OF"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="120dp"
+        tools:layout_editor_absoluteY="189dp" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:background="#648F40"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="-2dp" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="?"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="265dp"
+        tools:layout_editor_absoluteY="184dp" />
+
+    <Button
+        android:id="@+id/button_Calculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#648F40"
+        android:elevation="6dp"
+        android:text="CALCULATE"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:cornerRadius="25"
+        tools:layout_editor_absoluteX="126dp"
+        tools:layout_editor_absoluteY="511dp" />
+
+    <TextView
+        android:id="@+id/textViewAnswer"
+        android:layout_width="225"
+        android:layout_height="80"
+        android:background="@drawable/bg_textview2"
+        tools:layout_editor_absoluteX="93dp"
+        tools:layout_editor_absoluteY="312dp" />
+
+    <EditText
+        android:id="@+id/percentInput"
+        android:layout_width="75"
+        android:layout_height="40"
+        android:background="@drawable/bg_textview2"
+        android:ems="10"
+        android:inputType="number"
+        tools:layout_editor_absoluteX="214dp"
+        tools:layout_editor_absoluteY="130dp" />
+
+    <EditText
+        android:id="@+id/numberInput"
+        android:layout_width="75"
+        android:layout_height="40"
+        android:background="@drawable/bg_textview2"
+        android:ems="10"
+        android:inputType="number"
+        tools:layout_editor_absoluteX="168dp"
+        tools:layout_editor_absoluteY="184dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
