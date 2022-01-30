@@ -14,6 +14,8 @@ public class MainActivity extends AppCompatActivity {
     private Button length_btn,
             weight_btn,
             volume_btn;
+    private Button time_btn;
+    private Button percentage_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +61,22 @@ public class MainActivity extends AppCompatActivity {
                 openVolumeCnvt();
             }
         });
+
+        time_btn = (Button) findViewById(R.id.time_btn);
+        time_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openTimeCnvt();
+            }
+        });
+
+        percentage_btn = (Button) findViewById(R.id.percentage_btn);
+        percentage_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openPercentageCnvt();
+            }
+        });
     }
 
     public void openCalc(){
@@ -79,6 +97,14 @@ public class MainActivity extends AppCompatActivity {
     }
     public void openVolumeCnvt(){
         Intent changeView = new Intent(this, VolumeCnvt.class);
+        startActivity(changeView);
+    }
+    public void openTimeCnvt(){
+        Intent changeView = new Intent(this, TimeConvert.class);
+        startActivity(changeView);
+    }
+    public void openPercentageCnvt(){
+        Intent changeView = new Intent(this, PercentageCnvt.class);
         startActivity(changeView);
     }
 

@@ -131,6 +131,24 @@
                 app:layout_constraintTop_toBottomOf="@+id/time_btn"
                 app:layout_constraintVertical_bias="0.0" />
 
+            <Button
+                android:id="@+id/percentage_btn"
+                android:layout_width="324dp"
+                android:layout_height="65dp"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="#648F40"
+                android:elevation="6dp"
+                android:text="PERCENTAGE"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                app:cornerRadius="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.647"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/speed_btn"
+                app:layout_constraintVertical_bias="0.0" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
