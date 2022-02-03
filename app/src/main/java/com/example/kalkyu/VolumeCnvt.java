@@ -75,12 +75,6 @@ public class VolumeCnvt extends AppCompatActivity {
                                 case "Gallon":
                                     OutputResult(Input, 0.0002641721, "gal");
                                     break;
-                                case "Cubic Meter":
-                                    OutputResult(Input, 0.000001, "m^3");
-                                    break;
-                                case "Cubic Feet":
-                                    OutputResult(Input, 0.0000353147, "ft^3");
-                                    break;
                                 default: Toast.makeText(getApplicationContext(), "Error: Same speed unit", Toast.LENGTH_SHORT).show();
                             }
 
@@ -98,12 +92,6 @@ public class VolumeCnvt extends AppCompatActivity {
                                     break;
                                 case "Gallon":
                                     OutputResult(Input, 0.2641720524, "gal");
-                                    break;
-                                case "Cubic Meter":
-                                    OutputResult(Input, 0.001, "m^3");
-                                    break;
-                                case "Cubic Feet":
-                                    OutputResult(Input, 0.0353146667, "ft^3");
                                     break;
                                 default: Toast.makeText(getApplicationContext(), "Error: Same speed unit", Toast.LENGTH_SHORT).show();
                             }
@@ -123,19 +111,13 @@ public class VolumeCnvt extends AppCompatActivity {
                                 case "Gallon":
                                     OutputResult(Input, 0.066043013, "gal");
                                     break;
-                                case "Cubic Meter":
-                                    OutputResult(Input, 0.0002365882, "m^3");
-                                    break;
-                                case "Cubic Feet":
-                                    OutputResult(Input, 0.0083550347, "ft^3");
-                                    break;
                                 default: Toast.makeText(getApplicationContext(), "Error: Same speed unit", Toast.LENGTH_SHORT).show();
                             }
 
                             break;
                         case "Pint":
                             switch (unit2){
-                                case "Milliliters":
+                                case "Milliliter":
                                     OutputResult(Input, 473.176473, "mL");
                                     break;
                                 case "Liter":
@@ -147,19 +129,13 @@ public class VolumeCnvt extends AppCompatActivity {
                                 case "Gallon":
                                     OutputResult(Input, 0.125, "gal");
                                     break;
-                                case "Cubic Meter":
-                                    OutputResult(Input, 0.0004731765, "m^3");
-                                    break;
-                                case "Cubic Feet":
-                                    OutputResult(Input, 0.0167100694, "ft^3");
-                                    break;
                                 default: Toast.makeText(getApplicationContext(), "Error: Same speed unit", Toast.LENGTH_SHORT).show();
                             }
 
                             break;
                         case "Gallon":
                             switch (unit2){
-                                case "Milliliters":
+                                case "Milliliter":
                                     OutputResult(Input, 3785.411784, "mL");
                                     break;
                                 case "Liter":
@@ -170,60 +146,6 @@ public class VolumeCnvt extends AppCompatActivity {
                                     break;
                                 case "Pint":
                                     OutputResult(Input, 8.0, "pt");
-                                    break;
-                                case "Cubic Meter":
-                                    OutputResult(Input, 0.0037854118, "m^3");
-                                    break;
-                                case "Cubic Feet":
-                                    OutputResult(Input, 0.1336805556, "ft^3");
-                                    break;
-                                default: Toast.makeText(getApplicationContext(), "Error: Same speed unit", Toast.LENGTH_SHORT).show();
-                            }
-
-                            break;
-                        case "Cubic Meter":
-                            switch (unit2){
-                                case "Milliliters":
-                                    OutputResult(Input, 1000000.0, "mL");
-                                    break;
-                                case "Liter":
-                                    OutputResult(Input, 1000.0, "L");
-                                    break;
-                                case "Cup":
-                                    OutputResult(Input, 4226.7528377, "Cups");
-                                    break;
-                                case "Pint":
-                                    OutputResult(Input, 2113.3764189, "pt");
-                                    break;
-                                case "Gallon":
-                                    OutputResult(Input, 264.17205236, "gal");
-                                    break;
-                                case "Cubic Feet":
-                                    OutputResult(Input, 35.314666721, "ft^3");
-                                    break;
-                                default: Toast.makeText(getApplicationContext(), "Error: Same speed unit", Toast.LENGTH_SHORT).show();
-                            }
-
-                            break;
-                        case "Cubic Feet":
-                            switch (unit2){
-                                case "Milliliters":
-                                    OutputResult(Input, 28316.846592, "mL");
-                                    break;
-                                case "Liter":
-                                    OutputResult(Input, 28.316846592, "L");
-                                    break;
-                                case "Cup":
-                                    OutputResult(Input, 119.68831169, "Cups");
-                                    break;
-                                case "Pint":
-                                    OutputResult(Input, 59.844155844, "pt");
-                                    break;
-                                case "Gallon":
-                                    OutputResult(Input, 7.4805194805, "gal");
-                                    break;
-                                case "Cubic Meter":
-                                    OutputResult(Input, 0.0283168466, "m^3");
                                     break;
                                 default: Toast.makeText(getApplicationContext(), "Error: Same speed unit", Toast.LENGTH_SHORT).show();
                             }
@@ -242,7 +164,7 @@ public class VolumeCnvt extends AppCompatActivity {
 
     public void OutputResult(Double InputVal, Double UnitVal, String UnitName){
 
-        DecimalFormat df = new DecimalFormat("0.#######");
+        DecimalFormat df = new DecimalFormat("0.####");
 
         OutputUnit = (TextView)findViewById(R.id.txtViewUnit);
         Unit = (TextView)findViewById(R.id.txtViewUnit2);

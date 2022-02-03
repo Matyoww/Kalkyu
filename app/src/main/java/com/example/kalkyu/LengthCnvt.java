@@ -54,7 +54,6 @@ public class LengthCnvt extends AppCompatActivity {
 
                 EditText inputUnit = (EditText)findViewById(R.id.txt_input);
                 Double Input = null;
-                Double Output = null;
 
                 try{
                     Input=Double.parseDouble(inputUnit.getText().toString());
@@ -83,12 +82,6 @@ public class LengthCnvt extends AppCompatActivity {
                                 case "Yard":
                                     OutputResult(Input, 0.0010936, "yd");
                                     break;
-                                case "Mile":
-                                    OutputResult(Input, 0.0000006214, "mi");
-                                    break;
-                                case "Nautical Mile":
-                                    OutputResult(Input, 0.00000054, "nmi");
-                                    break;
                                 default: Toast.makeText(getApplicationContext(), "Error: Same speed unit", Toast.LENGTH_SHORT).show();
                             }
 
@@ -112,12 +105,6 @@ public class LengthCnvt extends AppCompatActivity {
                                     break;
                                 case "Yard":
                                     OutputResult(Input, 0.010936, "yd");
-                                    break;
-                                case "Mile":
-                                    OutputResult(Input, 0.000006214, "mi");
-                                    break;
-                                case "Nautical Mile":
-                                    OutputResult(Input, 0.0000054, "nmi");
                                     break;
                                 default: Toast.makeText(getApplicationContext(), "Error: Same speed unit", Toast.LENGTH_SHORT).show();
                             }
@@ -143,12 +130,6 @@ public class LengthCnvt extends AppCompatActivity {
                                 case "Yard":
                                     OutputResult(Input, 1.0936, "yd");
                                     break;
-                                case "Mile":
-                                    OutputResult(Input, 0.0006214, "mi");
-                                    break;
-                                case "Nautical Mile":
-                                    OutputResult(Input, 0.00054, "nmi");
-                                    break;
                                 default: Toast.makeText(getApplicationContext(), "Error: Same speed unit", Toast.LENGTH_SHORT).show();
                             }
 
@@ -172,12 +153,6 @@ public class LengthCnvt extends AppCompatActivity {
                                     break;
                                 case "Yard":
                                     OutputResult(Input, 1093.6, "yd");
-                                    break;
-                                case "Mile":
-                                    OutputResult(Input, 0.6214, "mi");
-                                    break;
-                                case "Nautical Mile":
-                                    OutputResult(Input, 0.54, "nmi");
                                     break;
                                 default: Toast.makeText(getApplicationContext(), "Error: Same speed unit", Toast.LENGTH_SHORT).show();
                             }
@@ -203,12 +178,6 @@ public class LengthCnvt extends AppCompatActivity {
                                 case "Yard":
                                     OutputResult(Input, 0.02778, "yd");
                                     break;
-                                case "Mile":
-                                    OutputResult(Input, 0.000015783, "mi");
-                                    break;
-                                case "Nautical Mile":
-                                    OutputResult(Input, 0.000013715, "nmi");
-                                    break;
                                 default: Toast.makeText(getApplicationContext(), "Error: Same speed unit", Toast.LENGTH_SHORT).show();
                             }
 
@@ -232,12 +201,6 @@ public class LengthCnvt extends AppCompatActivity {
                                     break;
                                 case "Yard":
                                     OutputResult(Input, 0.33333, "yd");
-                                    break;
-                                case "Mile":
-                                    OutputResult(Input, 0.0001894, "mi");
-                                    break;
-                                case "Nautical Mile":
-                                    OutputResult(Input, 0.00016458, "nmi");
                                     break;
                                 default: Toast.makeText(getApplicationContext(), "Error: Same speed unit", Toast.LENGTH_SHORT).show();
                             }
@@ -263,79 +226,10 @@ public class LengthCnvt extends AppCompatActivity {
                                 case "Foot":
                                     OutputResult(Input, 3.0, "ft");
                                     break;
-                                case "Mile":
-                                    OutputResult(Input, 0.0005682, "mi");
-                                    break;
-                                case "Nautical Mile":
-                                    OutputResult(Input, 0.0004937, "nmi");
-                                    break;
                                 default: Toast.makeText(getApplicationContext(), "Error: Same speed unit", Toast.LENGTH_SHORT).show();
                             }
-
-                            break;
-                        case "Mile":
-                            switch (unit2){
-                                case "Millimeter":
-                                    OutputResult(Input, 1609344.0, "mm");
-                                    break;
-                                case "Centimeter":
-                                    OutputResult(Input, 160934.4, "cm");
-                                    break;
-                                case "Meter":
-                                    OutputResult(Input, 1609.3, "m");
-                                    break;
-                                case "Kilometer":
-                                    OutputResult(Input, 1.6093, "km");
-                                    break;
-                                case "Inch":
-                                    OutputResult(Input, 63360.0, "in");
-                                    break;
-                                case "Foot":
-                                    OutputResult(Input, 5280.0, "ft");
-                                    break;
-                                case "Yard":
-                                    OutputResult(Input, 1760.0, "yd");
-                                    break;
-                                case "Nautical Mile":
-                                    OutputResult(Input, 0.869, "nmi");
-                                    break;
-                                default: Toast.makeText(getApplicationContext(), "Error: Same speed unit", Toast.LENGTH_SHORT).show();
-                            }
-
-                            break;
-                        case "Nautical Mile":
-                            switch (unit2){
-                                case "Millimeter":
-                                    OutputResult(Input, 1852000.0, "mm");
-                                    break;
-                                case "Centimeter":
-                                    OutputResult(Input, 185200.0, "cm");
-                                    break;
-                                case "Meter":
-                                    OutputResult(Input, 1852.0, "m");
-                                    break;
-                                case "Kilometer":
-                                    OutputResult(Input, 1.852, "km");
-                                    break;
-                                case "Inch":
-                                    OutputResult(Input, 72913.0, "in");
-                                    break;
-                                case "Foot":
-                                    OutputResult(Input, 6076.0, "ft");
-                                    break;
-                                case "Yard":
-                                    OutputResult(Input, 2025.4, "yd");
-                                    break;
-                                case "Mile":
-                                    OutputResult(Input, 1.1508, "mi");
-                                    break;
-                                default: Toast.makeText(getApplicationContext(), "Error: Same speed unit", Toast.LENGTH_SHORT).show();
-                            }
-
                             break;
                         default: Toast.makeText(getApplicationContext(), "Please input speed unit value", Toast.LENGTH_SHORT).show();
-
-
                     }
                 }
                 catch(Exception e){
@@ -348,7 +242,7 @@ public class LengthCnvt extends AppCompatActivity {
 
     public void OutputResult(Double InputVal, Double UnitVal, String UnitName){
 
-        DecimalFormat df = new DecimalFormat("0.#######");
+        DecimalFormat df = new DecimalFormat("0.######");
 
         OutputUnit = (TextView)findViewById(R.id.txtViewUnit);
         Unit = (TextView)findViewById(R.id.txtViewUnit2);

@@ -17,7 +17,7 @@ import java.text.DecimalFormat;
 
 public class SpeedCnvt extends AppCompatActivity {
 
-    private static final DecimalFormat df = new DecimalFormat("0.000");
+    private static final DecimalFormat df = new DecimalFormat("0.####");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

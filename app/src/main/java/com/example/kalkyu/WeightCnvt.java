@@ -69,9 +69,6 @@ public class WeightCnvt extends AppCompatActivity {
                                 case "Kilogram":
                                     OutputResult(Input, 0.000001, "kg");
                                     break;
-                                case "Metric Ton":
-                                    OutputResult(Input, 0.000000001, "t");
-                                    break;
                                 case "Ounce":
                                     OutputResult(Input, 0.000035274, "oz");
                                     break;
@@ -89,9 +86,6 @@ public class WeightCnvt extends AppCompatActivity {
                                     break;
                                 case "Kilogram":
                                     OutputResult(Input, 0.001, "kg");
-                                    break;
-                                case "Metric Ton":
-                                    OutputResult(Input, 0.000001, "t");
                                     break;
                                 case "Ounce":
                                     OutputResult(Input, 0.035274, "oz");
@@ -111,35 +105,11 @@ public class WeightCnvt extends AppCompatActivity {
                                 case "Gram":
                                     OutputResult(Input, 1000.0, "g");
                                     break;
-                                case "Metric Ton":
-                                    OutputResult(Input, 0.001, "t");
-                                    break;
                                 case "Ounce":
                                     OutputResult(Input, 35.27396195, "oz");
                                     break;
                                 case "Pound":
                                     OutputResult(Input, 2.20462, "lb");
-                                    break;
-                                default: Toast.makeText(getApplicationContext(), "Error: Same speed unit", Toast.LENGTH_SHORT).show();
-                            }
-
-                            break;
-                        case "Metric Ton":
-                            switch (unit2){
-                                case "Milligram":
-                                    OutputResult(Input, 1000000000.0, "mg");
-                                    break;
-                                case "Gram":
-                                    OutputResult(Input, 1000000.0, "g");
-                                    break;
-                                case "Kilogram":
-                                    OutputResult(Input, 1000.0, "kg");
-                                    break;
-                                case "Ounce":
-                                    OutputResult(Input, 35273.96195, "oz");
-                                    break;
-                                case "Pound":
-                                    OutputResult(Input, 2204.6226218, "lb");
                                     break;
                                 default: Toast.makeText(getApplicationContext(), "Error: Same speed unit", Toast.LENGTH_SHORT).show();
                             }
@@ -155,9 +125,6 @@ public class WeightCnvt extends AppCompatActivity {
                                     break;
                                 case "Kilogram":
                                     OutputResult(Input, 0.0283495231, "kg");
-                                    break;
-                                case "Metric Ton":
-                                    OutputResult(Input, 0.0000283495, "t");
                                     break;
                                 case "Pound":
                                     OutputResult(Input, 0.0625, "lb");
@@ -176,9 +143,6 @@ public class WeightCnvt extends AppCompatActivity {
                                     break;
                                 case "Kilogram":
                                     OutputResult(Input, 0.45359237, "kg");
-                                    break;
-                                case "Metric Ton":
-                                    OutputResult(Input, 0.0004535924, "t");
                                     break;
                                 case "Ounce":
                                     OutputResult(Input, 16.0, "oz");
@@ -200,7 +164,7 @@ public class WeightCnvt extends AppCompatActivity {
 
     public void OutputResult(Double InputVal, Double UnitVal, String UnitName){
 
-        DecimalFormat df = new DecimalFormat("0.#######");
+        DecimalFormat df = new DecimalFormat("0.######");
 
         OutputUnit = (TextView)findViewById(R.id.txtViewUnit);
         Unit = (TextView)findViewById(R.id.txtViewUnit2);
