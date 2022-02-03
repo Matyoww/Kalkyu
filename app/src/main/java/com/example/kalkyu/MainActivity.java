@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
             volume_btn;
     private Button time_btn;
     private Button percentage_btn;
+    private Button basenumber_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,6 +78,14 @@ public class MainActivity extends AppCompatActivity {
                 openPercentageCnvt();
             }
         });
+
+        basenumber_btn = (Button) findViewById(R.id.basenumber_btn);
+        basenumber_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openBaseNumberCnvt();
+            }
+        });
     }
 
     public void openCalc(){
@@ -105,6 +114,11 @@ public class MainActivity extends AppCompatActivity {
     }
     public void openPercentageCnvt(){
         Intent changeView = new Intent(this, PercentageCnvt.class);
+        startActivity(changeView);
+    }
+
+    public void openBaseNumberCnvt(){
+        Intent changeView = new Intent(this,BaseNumberCnvt.class);
         startActivity(changeView);
     }
 
